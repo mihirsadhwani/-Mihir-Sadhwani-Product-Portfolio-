@@ -10,11 +10,11 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --outer-bg:      #111111;
-      --bg:            #181818;
-      --bg-section:    #141414;
-      --card-bg:       #202020;
-      --card-built:    #161616;
+      --outer-bg:      #1A1A1A;
+      --bg:            #242424;
+      --bg-section:    #1E1E1E;
+      --card-bg:       #2C2C2C;
+      --card-built:    #202020;
       --dark:          #F0EDE8;
       --mid:           #9A9488;
       --light:         #5A554E;
@@ -334,7 +334,7 @@
     .live-badge::before { content:'●'; font-size:0.36rem; color:#7EC897; }
     .live-badge:hover { background:rgba(126,200,151,0.18); transform:translateY(-1px); }
 
-    .projects-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.15rem; }
+    .projects-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.15rem; }
     .project-card {
       background:var(--card-bg); border:1px solid var(--border-strong);
       border-radius:10px; padding:1.3rem;
@@ -416,7 +416,6 @@
 
     /* ── RESPONSIVE — TABLET ── */
     @media(max-width:960px){
-      .projects-grid { grid-template-columns:repeat(2,1fr); }
       .about-grid { gap:2rem; }
     }
 
@@ -524,7 +523,53 @@
     </div>
     <a href="#projects" class="hero-cta fade5">View My Work ↓</a>
   </div>
-  <div class="hero-avatar fade3">🎯</div>
+    <div class="hero-avatar fade3">
+      <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#E8D5A3" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#E8D5A3" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="60" cy="60" r="58" fill="url(#glow)"/>
+        <!-- dot grid pattern -->
+        <g fill="#E8D5A3">
+          <!-- row 1 -->
+          <circle cx="24" cy="24" r="2" opacity="0.25"/>
+          <circle cx="40" cy="24" r="2" opacity="0.35"/>
+          <circle cx="56" cy="24" r="2" opacity="0.5"/>
+          <circle cx="72" cy="24" r="2" opacity="0.35"/>
+          <circle cx="88" cy="24" r="2" opacity="0.25"/>
+          <!-- row 2 -->
+          <circle cx="24" cy="40" r="2" opacity="0.35"/>
+          <circle cx="40" cy="40" r="2.5" opacity="0.55"/>
+          <circle cx="56" cy="40" r="2.5" opacity="0.75"/>
+          <circle cx="72" cy="40" r="2.5" opacity="0.55"/>
+          <circle cx="88" cy="40" r="2" opacity="0.35"/>
+          <!-- row 3 -->
+          <circle cx="24" cy="56" r="2" opacity="0.5"/>
+          <circle cx="40" cy="56" r="2.5" opacity="0.75"/>
+          <circle cx="56" cy="56" r="4" opacity="1"/>
+          <circle cx="72" cy="56" r="2.5" opacity="0.75"/>
+          <circle cx="88" cy="56" r="2" opacity="0.5"/>
+          <!-- row 4 -->
+          <circle cx="24" cy="72" r="2" opacity="0.35"/>
+          <circle cx="40" cy="72" r="2.5" opacity="0.55"/>
+          <circle cx="56" cy="72" r="2.5" opacity="0.75"/>
+          <circle cx="72" cy="72" r="2.5" opacity="0.55"/>
+          <circle cx="88" cy="72" r="2" opacity="0.35"/>
+          <!-- row 5 -->
+          <circle cx="24" cy="88" r="2" opacity="0.25"/>
+          <circle cx="40" cy="88" r="2" opacity="0.35"/>
+          <circle cx="56" cy="88" r="2" opacity="0.5"/>
+          <circle cx="72" cy="88" r="2" opacity="0.35"/>
+          <circle cx="88" cy="88" r="2" opacity="0.25"/>
+        </g>
+        <!-- thin gold ring -->
+        <circle cx="60" cy="60" r="54" fill="none" stroke="#E8D5A3" stroke-width="0.5" opacity="0.2"/>
+        <circle cx="60" cy="60" r="44" fill="none" stroke="#E8D5A3" stroke-width="0.5" opacity="0.12"/>
+      </svg>
+    </div>
 </div>
 
 <!-- ABOUT -->
@@ -672,7 +717,7 @@
         <div class="project-footer">
           <div class="project-tools"><span class="cs-tool">Whimsical</span><span class="cs-tool">Notion</span></div>
           <div style="display:flex;gap:0.3rem;flex-wrap:wrap;">
-            <a href="https://drive.google.com/file/d/1SzwZMf-Mx6fz0Zrfp4L9mE7sUkh6ac_B/view?usp=drive_link" target="_blank" class="doc-badge doc-gold">Case Study ↗</a>
+            <a href="https://drive.google.com/file/d/1rKrhnrkUAlcwr7P9JuVSueLi4Ccrcggk/view?usp=drive_link" target="_blank" class="doc-badge doc-gold">Case Study ↗</a>
             <a href="https://drive.google.com/file/d/1j3oC4oR7j0hDdJ6I54upVC6U-qy--75g/view?usp=drive_link" target="_blank" class="doc-badge doc-lavend">PRD ↗</a>
             <a href="https://drive.google.com/file/d/1DvFKrOcfBOL4hZjr5RnxhtFbgnpFq-yc/view?usp=drive_link" target="_blank" class="doc-badge doc-sage">Frames ↗</a>
           </div>
