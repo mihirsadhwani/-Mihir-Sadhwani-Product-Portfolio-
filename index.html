@@ -264,7 +264,7 @@
     }
     .built-label::after { content:''; flex:1; height:1px; background:var(--border-strong); }
 
-    .built-row { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; margin-bottom:2.5rem; }
+    .built-row { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-bottom:2.5rem; }
     .project-card-built {
       background:var(--card-built);
       border:1px solid var(--border-strong);
@@ -416,6 +416,7 @@
 
     /* ── RESPONSIVE — TABLET ── */
     @media(max-width:960px){
+      .built-row { grid-template-columns:repeat(2,1fr); }
       .about-grid { gap:2rem; }
     }
 
@@ -703,9 +704,34 @@
         </div>
       </div>
 
-    </div>
-
-    <div class="built-label" style="margin-top:0.25rem;">📋 Case Studies & Teardowns</div>
+      <div class="project-card-built">
+        <div class="built-top">
+          <span class="built-emoji">🛍️</span>
+          <span class="built-type">AI Pipeline · Next.js · Automation</span>
+        </div>
+        <h3>Flipkart Product Discovery Dashboard</h3>
+        <p class="built-tagline">New Flipkart launches — scraped daily, AI-analyzed, ranked by value.</p>
+        <div class="built-tags">
+          <span class="tag t6">E-commerce</span><span class="tag t4">AI Pipeline</span><span class="tag t3">Automation</span>
+        </div>
+        <div class="built-insight">
+          💡 <strong>Key Insight:</strong> Hundreds of new products launch on Flipkart every week. No one has time to find them — let alone evaluate them.
+        </div>
+        <div class="built-what">
+          <div class="built-what-label">What it does</div>
+          <ul>
+            <li>Scrapes new Flipkart launches 3x daily across Electronics, Fashion, Home & Beauty</li>
+            <li>Runs dual AI pipeline — Groq for speed on daily finds, Gemini for deeper weekly synthesis</li>
+            <li>Surfaces BUY / WAIT decisions with pros, cons, and Value for Money rankings</li>
+          </ul>
+        </div>
+        <div class="built-footer">
+          <div class="built-tools">
+            <span class="tool-chip">Python</span><span class="tool-chip">Groq</span><span class="tool-chip">Gemini</span><span class="tool-chip">Next.js</span><span class="tool-chip">GitHub Actions</span>
+          </div>
+          <a href="https://weekly-product-discovery-dashboard.vercel.app/" target="_blank" class="live-badge">Live ↗</a>
+        </div>
+      </div>
     <div class="projects-grid">
 
       <div class="project-card">
